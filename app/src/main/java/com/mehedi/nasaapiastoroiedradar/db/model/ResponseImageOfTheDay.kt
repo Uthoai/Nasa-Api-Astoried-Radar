@@ -3,9 +3,13 @@ package com.mehedi.nasaapiastoroiedradar.db.model
 
 import com.squareup.moshi.Json
 import androidx.annotation.Keep
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Keep
+@Entity(tableName = "image_of_the_day")
 data class ResponseImageOfTheDay(
+    @PrimaryKey
     @Json(name = "date")
     val date: String? = null,
     @Json(name = "explanation")

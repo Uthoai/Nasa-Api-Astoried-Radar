@@ -46,7 +46,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         getAsteroidData()
     }
 
-    private fun getImageOfTheDay() {
+    fun getImageOfTheDay() {
         _loading.value = true
 
         viewModelScope.launch {
@@ -82,7 +82,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         return asteroidDao.getAllImageOfTheDayData()
     }
 
-    private fun getAsteroidData() {
+    fun getAsteroidData() {
         viewModelScope.launch {
             try {
                 // Call the network service
